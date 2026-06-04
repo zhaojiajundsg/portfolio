@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jiajun Zhao — Designer & Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F5F2EC;
+    --ink: #1A1814;
+    --ink-light: #5A574F;
+    --ink-faint: #9A978F;
+    --green: #3B5A2E;
+    --green-light: #D4E4C8;
+    --accent: #8B6914;
+    --accent-light: #F0E4C4;
+    --serif: 'EB Garamond', Georgia, serif;
+    --mono: 'DM Mono', monospace;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(245,242,236,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(26,24,20,0.08);
+  }
+
+  .nav-name {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--ink-light);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--ink-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+
+  /* SECTIONS */
+  section { min-height: 100vh; }
+
+  /* HOME */
+  #home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 3rem 4rem;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .home-eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .home-name {
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 400;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-tagline {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-style: italic;
+    color: var(--ink-light);
+    max-width: 520px;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+  }
+
+  .home-scroll {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--ink-faint);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .home-scroll::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--ink-faint);
+  }
+
+  .home-deco {
+    position: absolute;
+    right: 3rem;
+    bottom: 4rem;
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(26,24,20,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-deco-inner {
+    width: 140px;
+    height: 140px;
+    border: 1px solid rgba(26,24,20,0.06);
+    border-radius: 50%;
+  }
+
+  /* SECTION HEADER */
+  .section-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--ink-faint);
+  }
+
+  /* LIVING PRACTICE */
+  #living {
+    padding: 6rem 3rem;
+    background: var(--ink);
+    color: var(--cream);
+    min-height: auto;
+  }
+
+  #living .section-label {
+    color: rgba(245,242,236,0.4);
+  }
+
+  #living .section-label::before {
+    background: rgba(245,242,236,0.4);
+  }
+
+  .living-header {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+  }
+
+  .living-intro {
+    font-size: 1.05rem;
+    color: rgba(245,242,236,0.65);
+    max-width: 620px;
+    margin-bottom: 4rem;
+    font-style: italic;
+  }
+
+  /* Two story blocks */
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 2px;
+  }
+
+  .story-block {
+    background: rgba(245,242,236,0.04);
+    border: 1px solid rgba(245,242,236,0.08);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .story-block:hover {
+    background: rgba(245,242,236,0.07);
+  }
+
+  .story-number {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: rgba(245,242,236,0.3);
+    margin-bottom: 1.2rem;
+  }
+
+  .story-title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--cream);
+  }
+
+  .story-body {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(245,242,236,0.6);
+  }
+
+  .story-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    padding: 4px 10px;
+    border: 1px solid rgba(245,242,236,0.15);
+    color: rgba(245,242,236,0.4);
+    margin-top: 1.5rem;
+  }
+
+  /* Photo grid for living practice */
+  .photo-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    margin-top: 2px;
+  }
+
+  .photo-cell {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: rgba(245,242,236,0.05);
+  }
+
+  .photo-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+    filter: grayscale(20%);
+    transition: opacity 0.4s, filter 0.4s;
+  }
+
+  .photo-cell:hover img {
+    opacity: 0.95;
+    filter: grayscale(0%);
+  }
+
+  /* GRADUATION PROJECT */
+  #graduation {
+    padding: 6rem 3rem;
+    min-height: auto;
+  }
+
+  .project-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-top: 1rem;
+  }
+
+  .project-text h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-subtitle {
+    font-size: 1rem;
+    color: var(--ink-light);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-body {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--ink-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    padding: 4px 12px;
+    border: 1px solid rgba(26,24,20,0.2);
+    color: var(--ink-light);
+  }
+
+  .project-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .vis-cell {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: #E8E4DC;
+  }
+
+  .vis-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .vis-cell:hover img {
+    transform: scale(1.04);
+  }
+
+  .vis-cell.tall {
+    grid-row: span 2;
+    aspect-ratio: auto;
+  }
+
+  /* Quote block */
+  .quote-block {
+    border-left: 2px solid var(--green);
+    padding: 1.5rem 2rem;
+    margin: 2.5rem 0;
+    background: var(--green-light);
+  }
+
+  .quote-block p {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--green);
+    line-height: 1.6;
+  }
+
+  .quote-block cite {
+    display: block;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--green);
+    opacity: 0.7;
+    margin-top: 0.5rem;
+    font-style: normal;
+  }
+
+  /* PROFESSIONAL WORK */
+  #work {
+    padding: 6rem 3rem;
+    background: #EFECE4;
+    min-height: auto;
+  }
+
+  .work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+  }
+
+  .work-header h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 400;
+  }
+
+  .case-layout {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .case-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .case-cell {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: #DDD8CE;
+  }
+
+  .case-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .case-cell:hover img {
+    transform: scale(1.04);
+  }
+
+  .case-cell.wide {
+    grid-column: span 2;
+    aspect-ratio: 16/7;
+  }
+
+  .case-info {
+    padding-top: 0.5rem;
+  }
+
+  .case-info h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+  }
+
+  .case-info .role {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--ink-faint);
+    margin-bottom: 1.2rem;
+  }
+
+  .case-info p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--ink-light);
+    margin-bottom: 1rem;
+  }
+
+  .challenge-list {
+    margin: 1rem 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .challenge-list li {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(26,24,20,0.08);
+    display: flex;
+    gap: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .challenge-list li::before {
+    content: '→';
+    color: var(--accent);
+    flex-shrink: 0;
+    font-style: normal;
+  }
+
+  /* CONTACT */
+  #contact {
+    padding: 6rem 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+    border-top: 1px solid rgba(26,24,20,0.1);
+  }
+
+  .contact-header {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
+
+  .contact-header em {
+    color: var(--ink-faint);
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: var(--ink);
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(26,24,20,0.1);
+    transition: padding-left 0.3s;
+  }
+
+  .contact-link:hover {
+    padding-left: 0.5rem;
+  }
+
+  .contact-link .link-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--ink-faint);
+    width: 80px;
+    flex-shrink: 0;
+  }
+
+  .contact-link .link-value {
+    font-size: 1.1rem;
+    color: var(--ink);
+  }
+
+  .contact-link .link-arrow {
+    margin-left: auto;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .contact-link:hover .link-arrow {
+    opacity: 1;
+  }
+
+  .footer-note {
+    margin-top: 4rem;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* DIVIDER */
+  .ruled-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(26,24,20,0.1);
+    margin: 2rem 0;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    animation: fadeUp 0.7s ease forwards;
+  }
+
+  .delay-1 { animation-delay: 0.15s; opacity: 0; }
+  .delay-2 { animation-delay: 0.3s; opacity: 0; }
+  .delay-3 { animation-delay: 0.45s; opacity: 0; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.5rem; }
+    #home, #graduation, #work, #contact { padding: 5rem 1.5rem 3rem; }
+    #living { padding: 5rem 1.5rem 3rem; }
+    .story-grid { grid-template-columns: 1fr; }
+    .project-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .case-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .photo-strip { grid-template-columns: repeat(3, 1fr); }
+    .home-deco { display: none; }
+    .work-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .footer-note { flex-direction: column; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-name">Jiajun Zhao</a>
+  <ul class="nav-links">
+    <li><a href="#living">Living Practice</a></li>
+    <li><a href="#graduation">Research</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <p class="home-eyebrow fade-up">Portfolio — 2025</p>
+  <h1 class="home-name fade-up delay-1">Jiajun<br>Zhao</h1>
+  <p class="home-tagline fade-up delay-2">Designer who makes,<br>researcher who grows.</p>
+  <p class="home-scroll fade-up delay-3">Scroll to explore</p>
+  <div class="home-deco" aria-hidden="true">
+    <div class="home-deco-inner"></div>
+  </div>
+</section>
+
+<!-- LIVING PRACTICE -->
+<section id="living">
+  <div class="section-label">Living Practice</div>
+
+  <h2 class="living-header">
+    Design as a way of living —<br>
+    entangled with matter, season, and the unexpected.
+  </h2>
+  <p class="living-intro">
+    My practice does not begin at the desk. It begins in the garden, at the workbench, in the moment a fox crosses the threshold and becomes a collaborator.
+  </p>
+
+  <div class="story-grid">
+    <!-- Story 1: Luffa -->
+    <div class="story-block">
+      <div class="story-number">01 — Growing with Luffa</div>
+      <h3 class="story-title">From seed to sponge:<br>a full cycle of material care</h3>
+      <p class="story-body">
+        In a small London backyard, I planted loofah — <em>luffa aegyptiaca</em> — from seed. I germinated them in recycled plastic cups under the kitchen table, moved them outdoors in spring, built bamboo scaffolding by hand, added eggshell and kitchen compost to nourish the soil. I watched the tendrils grip, the flowers open and close, the fruit swell. When the season ended, what remained was not waste — it was a fibrous, biodegradable sponge. A material grown, not manufactured.
+      </p>
+      <p class="story-body" style="margin-top: 1rem;">
+        Growing something you will eventually use changes your relationship to it. You understand where it comes from, what conditions it needs, what it costs in time and attention. This is the foundation of what I understand as regenerative design: not just zero waste as a system principle, but care as a design method.
+      </p>
+      <span class="story-tag">Gardening · Biomaterial · Composting</span>
+    </div>
+
+    <!-- Story 2: Fox -->
+    <div class="story-block">
+      <div class="story-number">02 — A Fox, a Bag, and a Repair</div>
+      <h3 class="story-title">When a non-human actor enters<br>the life of an object</h3>
+      <p class="story-body">
+        I had made a leather crossbody bag by hand for my partner — saddle-stitched, hand-burnished, shaped across many evenings. One morning, a fox came into our garden and took it. When I found the bag, the shoulder strap had been partially eaten through.
+      </p>
+      <p class="story-body" style="margin-top: 1rem;">
+        I repaired it. I cut a new strap from black leather, stitched it to the original tan, and riveted the join. The bag now carries a visible record of this encounter — a seam where two leathers meet, a small interruption in the original design that is also its most interesting detail.
+      </p>
+      <p class="story-body" style="margin-top: 1rem;">
+        This experience sits at the heart of what I want to research: how non-human actors change the trajectory of designed objects, and what happens when repair becomes a design act rather than an afterthought.
+      </p>
+      <span class="story-tag">Leatherwork · Repair · More-than-human</span>
+    </div>
+  </div>
+
+  <!-- Photo strip -->
+  <div class="photo-strip">
+    <div class="photo-cell">
+      <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&q=80" alt="Young plant seedlings in cups">
+    </div>
+    <div class="photo-cell">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Garden with climbing plants">
+    </div>
+    <div class="photo-cell">
+      <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=400&q=80" alt="Yellow flower blooming">
+    </div>
+    <div class="photo-cell">
+      <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&q=80" alt="Leather craft tools on workbench">
+    </div>
+    <div class="photo-cell">
+      <img src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?w=400&q=80" alt="Leather bag detail">
+    </div>
+  </div>
+
+  <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(245,242,236,0.1);">
+    <p style="font-size: 0.9rem; color: rgba(245,242,236,0.4); font-family: var(--mono); letter-spacing: 0.08em; max-width: 600px; line-height: 1.8;">
+      Note — All images above are placeholder references. The actual project photographs will replace these: luffa growing from seed to harvest, the leather bag before and after fox encounter, the repair process and tools.
+    </p>
+  </div>
+</section>
+
+<!-- GRADUATION PROJECT -->
+<section id="graduation">
+  <div class="section-label">Graduation Project</div>
+
+  <div class="project-layout">
+    <div class="project-text">
+      <h2>Thinking Aloud</h2>
+      <p class="project-subtitle">Visualising the invisible labour of creative work — Royal College of Art, 2024</p>
+
+      <p class="project-body">
+        Design work is full of thinking that leaves no trace. Hours of research, observation, and synthesis — cognitive labour that is real and exhausting, yet invisible to colleagues, clients, and even to the designer themselves. This invisibility breeds anxiety.
+      </p>
+
+      <div class="quote-block">
+        <p>"Not been able to see the output, feels like I didn't do much work."</p>
+        <cite>— Junior designer interviewed during research, 3 years experience</cite>
+      </div>
+
+      <p class="project-body">
+        Through six weeks of field research — interviews with designers at PA Consulting, ethnographic observation of design students, and a support group visit at Mind in Camden — I identified a core tension: cognitive labour is rendered invisible by its nature, and that invisibility is a primary driver of creative anxiety.
+      </p>
+
+      <p class="project-body">
+        The key insight came from observation: designers unconsciously shake their legs, play with their hair, and tap their fingers when thinking hard. These subconscious behaviours are physical signatures of mental work. I designed two devices that capture these signatures and make them visible.
+      </p>
+
+      <p class="project-body">
+        <strong style="font-weight:500;">Device 1 — Thinking Aloud</strong> sits under the desk and senses leg movement. As the designer thinks, the motion pumps air through a tube, gradually inflating a red balloon on the desktop. The harder you think, the bigger it grows. Thought, made visible.
+      </p>
+
+      <p class="project-body">
+        <strong style="font-weight:500;">Device 2</strong> collects sketches and paper records deposited by the designer and gives a thumbs-up — a simple, tangible acknowledgement that the work happened and mattered.
+      </p>
+
+      <div class="tag-row">
+        <span class="tag">Research-through-design</span>
+        <span class="tag">Ethnography</span>
+        <span class="tag">Interaction design</span>
+        <span class="tag">Mental wellbeing</span>
+        <span class="tag">Prototyping</span>
+      </div>
+    </div>
+
+    <div class="project-visual">
+      <div class="vis-cell tall">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Device prototype">
+      </div>
+      <div class="vis-cell">
+        <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&q=80" alt="Research process">
+      </div>
+      <div class="vis-cell">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Testing with users">
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 2rem; padding: 1rem; background: rgba(26,24,20,0.04); border-left: 2px solid rgba(26,24,20,0.1);">
+    <p style="font-size: 0.85rem; color: var(--ink-faint); font-family: var(--mono); letter-spacing: 0.07em; line-height: 1.7;">
+      Note — Placeholder images shown. Replace with: the red balloon device in use, Device 2 thumbs-up mechanism, field research photos from RCA studio, and exhibition testing session images from the portfolio PDF.
+    </p>
+  </div>
+</section>
+
+<!-- PROFESSIONAL WORK -->
+<section id="work">
+  <div class="section-label">Selected Professional Work</div>
+
+  <div class="work-header">
+    <h2>GAO TEA — Brand &amp; Packaging</h2>
+  </div>
+
+  <div class="case-layout">
+    <div class="case-visual">
+      <div class="case-cell wide">
+        <img src="https://images.unsplash.com/photo-1567922045116-2a00fae2ed03?w=800&q=80" alt="GAO TEA packaging overview">
+      </div>
+      <div class="case-cell">
+        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80" alt="Packaging detail">
+      </div>
+      <div class="case-cell">
+        <img src="https://images.unsplash.com/photo-1563897539633-7374c276a8b3?w=400&q=80" alt="Logo design">
+      </div>
+    </div>
+
+    <div class="case-info">
+      <h3>GAO TEA</h3>
+      <p class="role">INDUSTRIAL DESIGNER — BRAND, PACKAGING, PROTOTYPE</p>
+
+      <p>A zero-waste tea brand built around Chinese tea paste — a solid concentrate that dissolves instantly in hot water, leaving no leaf residue. The design challenge was to create packaging that matched the product's ecological ambition.</p>
+
+      <p>The packaging is formed from dry-pressed moulded pulp — no glue, no complex structure, fully recyclable. A rotating dispensing lid lets users access tea paste without opening the container fully, preserving freshness and reducing exposure.</p>
+
+      <ul class="challenge-list">
+        <li>Reduce individual packaging without compromising moisture protection</li>
+        <li>Zero-waste structure — no adhesives, minimal material</li>
+        <li>Scalable container system — one lid fits multiple body sizes</li>
+        <li>Express the duality of <em>convenient</em> and <em>traditional</em> through form</li>
+      </ul>
+
+      <p>The brand name GAO (膏) — meaning paste — shares its pronunciation with the Chinese word for "high quality." The logo fuses the Latin letters G, A, O with the Chinese character 膏, creating a mark that holds both traditions simultaneously.</p>
+
+      <div class="tag-row">
+        <span class="tag">Brand design</span>
+        <span class="tag">Packaging</span>
+        <span class="tag">Zero-waste</span>
+        <span class="tag">Moulded pulp</span>
+        <span class="tag">Prototype</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 2rem; padding: 1rem; background: rgba(26,24,20,0.05); border-left: 2px solid rgba(26,24,20,0.1);">
+    <p style="font-size: 0.85rem; color: var(--ink-faint); font-family: var(--mono); letter-spacing: 0.07em; line-height: 1.7;">
+      Note — Placeholder images shown. Replace with GAO TEA renders from the portfolio PDF: the beige pulp containers, logo lockup on brick wall, sketch process sheets, and orange 3D-printed prototypes.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="contact-header">
+    Let's talk about<br>
+    <em>making, growing,<br>and what design can become.</em>
+  </h2>
+
+  <div class="contact-links">
+    <a class="contact-link" href="mailto:10035545@network.rca.ac.uk">
+      <span class="link-label">Email</span>
+      <span class="link-value">10035545@network.rca.ac.uk</span>
+      <span class="link-arrow">→</span>
+    </a>
+    <a class="contact-link" href="#" aria-label="LinkedIn profile (placeholder)">
+      <span class="link-label">LinkedIn</span>
+      <span class="link-value">linkedin.com/in/jiajunzhao</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <div class="ruled-line" style="margin-top: 3rem;"></div>
+
+  <div class="footer-note">
+    <span>Jiajun Zhao — Designer &amp; Researcher</span>
+    <span>Royal College of Art, London · 2025</span>
+  </div>
+</section>
+
+<script>
+  // Smooth scroll for nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        e.target.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.story-block, .project-layout, .case-layout').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
