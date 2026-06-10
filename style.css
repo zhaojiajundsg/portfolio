@@ -199,6 +199,22 @@ nav {
 .detail-figure figcaption, .detail-gallery figcaption { font-size: 12px; font-weight: 500; color: var(--ink-faint); margin-top: 0.8rem; }
 .detail-gallery { max-width: 100%; margin: 0 0 3.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .detail-gallery.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+/* luffa custom grid: col1 = 5 on top + (6,8) below; col2 = 7 tall; col3 = 9 tall */
+.luffa-grid {
+  max-width: 100%; margin: 0 0 3.5rem;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "five seven nine" "pair seven nine";
+  gap: 8px;
+  aspect-ratio: 16 / 9;
+}
+.luffa-grid .area-five { grid-area: five; }
+.luffa-grid .area-seven { grid-area: seven; }
+.luffa-grid .area-nine { grid-area: nine; }
+.luffa-grid .area-pair { grid-area: pair; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.luffa-grid .ph-cell { aspect-ratio: auto; height: 100%; width: 100%; }
 .detail-gallery .ph-cell { aspect-ratio: 4 / 3; }
 
 .quote-block { max-width: 100%; margin: 2.5rem 0; padding: 1.5rem 2rem; background: var(--ph-bg); border-left: 2px solid var(--ink); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -220,4 +236,6 @@ nav {
   .detail-body { padding: 1rem 1.4rem 3rem; }
   .detail-gallery { grid-template-columns: 1fr; }
   .detail-gallery.cols-3 { grid-template-columns: 1fr 1fr; }
+  .luffa-grid { aspect-ratio: auto; grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "five" "pair" "seven" "nine"; }
+  .luffa-grid .ph-cell { aspect-ratio: 4 / 3; height: auto; }
 }
