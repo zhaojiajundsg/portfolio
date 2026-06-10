@@ -112,6 +112,31 @@ nav {
 .pc-media.leather-thumb .ph-cell:first-child { grid-column: auto; }
 .pc-media.leather-thumb .ph-cell { aspect-ratio: 3 / 4; }
 
+/* single-image homepage thumb filling the whole media area */
+.pc-media.single-thumb { grid-template-columns: 1fr; }
+.pc-media.single-thumb .ph-cell:first-child { grid-column: auto; aspect-ratio: 16 / 9; }
+
+/* 2:1 framed figure */
+.figure-2to1 { margin: 0 0 8px; }
+.figure-2to1 .ph-cell { aspect-ratio: 2 / 1; }
+.figure-2to1 img { border-radius: var(--radius); }
+
+/* split section: text on one side, image on the other */
+.split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; margin: 0 0 3.5rem; }
+.split-section .split-text h3 { font-size: 1.4rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 1rem; }
+.split-section .split-text p { font-size: 1.02rem; line-height: 1.8; color: var(--ink-light); margin-bottom: 1.2rem; }
+.split-section .split-media { margin: 0; }
+.split-section .split-media .ph-cell { aspect-ratio: 3 / 4; min-height: 0; }
+.split-section .split-media img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: var(--radius); }
+.split-section .split-media figcaption { font-size: 12px; font-weight: 500; color: var(--ink-faint); margin-top: 0.8rem; }
+
+/* vertical image stack with consistent small gaps */
+.img-stack { display: flex; flex-direction: column; gap: 8px; margin: 0 0 3.5rem; }
+.img-stack figure { margin: 0; }
+.img-stack .figure-2to1 .ph-cell { aspect-ratio: 2 / 1; }
+.img-stack .figure-full img { width: 100%; height: auto; display: block; border-radius: var(--radius); }
+.img-stack img { border-radius: var(--radius); }
+
 .pc-text { display: flex; flex-direction: column; }
 .pc-text .pc-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1rem; }
 .pc-text h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; line-height: 1.12; letter-spacing: -0.025em; margin-bottom: 0.5rem; }
@@ -265,4 +290,5 @@ nav {
   .luffa-grid { aspect-ratio: auto; grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "five" "pair" "seven" "nine"; }
   .luffa-grid .ph-cell { aspect-ratio: 4 / 3; height: auto; }
   .figure-pair { grid-template-columns: 1fr; }
+  .split-section { grid-template-columns: 1fr; gap: 1.5rem; }
 }
