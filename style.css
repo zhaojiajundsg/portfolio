@@ -107,6 +107,11 @@ nav {
 .pc-media.luffa-thumb .ph-cell:first-child { aspect-ratio: 23.5 / 9; }
 .pc-media.luffa-thumb .ph-cell { aspect-ratio: 3.6 / 3; }
 
+/* leather homepage thumb: two portrait images side by side */
+.pc-media.leather-thumb { grid-template-columns: 1fr 1fr; }
+.pc-media.leather-thumb .ph-cell:first-child { grid-column: auto; }
+.pc-media.leather-thumb .ph-cell { aspect-ratio: 3 / 4; }
+
 .pc-text { display: flex; flex-direction: column; }
 .pc-text .pc-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1rem; }
 .pc-text h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; line-height: 1.12; letter-spacing: -0.025em; margin-bottom: 0.5rem; }
@@ -221,6 +226,13 @@ nav {
 .luffa-grid .ph-cell { aspect-ratio: auto; height: 100%; width: 100%; }
 .detail-gallery .ph-cell { aspect-ratio: 4 / 3; }
 .detail-gallery.short .ph-cell { aspect-ratio: 5 / 3; }
+.detail-gallery.portrait .ph-cell { aspect-ratio: 3 / 4; }
+
+/* two images side by side, each with its own caption */
+.figure-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 3.5rem; }
+.figure-pair figure { margin: 0; }
+.figure-pair .ph-cell { aspect-ratio: 4 / 3; }
+.figure-pair figcaption { font-size: 12px; font-weight: 500; color: var(--ink-faint); margin-top: 0.8rem; }
 
 .quote-block { max-width: 100%; margin: 2.5rem 0; padding: 1.5rem 2rem; background: var(--ph-bg); border-left: 2px solid var(--ink); border-radius: 0 var(--radius) var(--radius) 0; }
 .quote-block p { font-size: 1.1rem; font-style: italic; color: var(--ink); line-height: 1.6; }
@@ -243,4 +255,5 @@ nav {
   .detail-gallery.cols-3 { grid-template-columns: 1fr 1fr; }
   .luffa-grid { aspect-ratio: auto; grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "five" "pair" "seven" "nine"; }
   .luffa-grid .ph-cell { aspect-ratio: 4 / 3; height: auto; }
+  .figure-pair { grid-template-columns: 1fr; }
 }
