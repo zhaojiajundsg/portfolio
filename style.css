@@ -114,7 +114,7 @@ nav {
 
 /* single-image homepage thumb filling the whole media area */
 .pc-media.single-thumb { grid-template-columns: 1fr; }
-.pc-media.single-thumb .ph-cell:first-child { grid-column: auto; aspect-ratio: 16 / 9; }
+.pc-media.single-thumb .ph-cell:first-child { grid-column: auto; aspect-ratio: 1.25 / 1; }
 
 /* 2:1 framed figure */
 .figure-2to1 { margin: 0 0 8px; }
@@ -122,11 +122,11 @@ nav {
 .figure-2to1 img { border-radius: var(--radius); }
 
 /* split section: text on one side, image on the other */
-.split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; margin: 0 0 3.5rem; }
+.split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; margin: 0 0 3.5rem; }
 .split-section .split-text h3 { font-size: 1.4rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 1rem; }
 .split-section .split-text p { font-size: 1.02rem; line-height: 1.8; color: var(--ink-light); margin-bottom: 1.2rem; }
 .split-section .split-media { margin: 0; }
-.split-section .split-media .ph-cell { aspect-ratio: 3 / 4; min-height: 0; }
+.split-section .split-media .ph-cell { aspect-ratio: 5 / 3; min-height: 0; }
 .split-section .split-media img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: var(--radius); }
 .split-section .split-media figcaption { font-size: 12px; font-weight: 500; color: var(--ink-faint); margin-top: 0.8rem; }
 
