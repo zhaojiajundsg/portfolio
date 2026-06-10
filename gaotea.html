@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAO TEA — Jiajun Zhao</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-name">Jiajun Zhao</a>
+  <ul class="nav-links">
+    <li><a href="works.html">Works</a></li>
+    <li><a href="living-practice.html">Living Practice</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="detail-main">
+  <header class="detail-hero">
+    <a href="index.html" class="detail-back">← Back to home</a>
+    <p class="detail-eyebrow">Work · Commercial</p>
+    <h1 class="detail-title">GAO TEA</h1>
+    <p class="detail-subtitle">A zero-waste tea brand built around Chinese tea paste.</p>
+    <div class="detail-meta"><div class="meta-item"><span class="meta-key">Role</span><span class="meta-val">Industrial Designer</span></div><div class="meta-item"><span class="meta-key">Scope</span><span class="meta-val">Brand · Packaging · Prototype</span></div><div class="meta-item"><span class="meta-key">Material</span><span class="meta-val">Moulded pulp</span></div><div class="meta-item"><span class="meta-key">Year</span><span class="meta-val">2024</span></div></div>
+  </header>
+  <div class="detail-body">
+    <section class="detail-section lead"><p>A zero-waste tea brand built around Chinese tea paste — a solid concentrate that dissolves instantly in hot water, leaving no leaf residue. The design challenge was to create packaging that matched the product's ecological ambition.</p></section>
+    <figure class="detail-figure"><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/gaotea-1.jpg</span></span><img src="images/gaotea-1.jpg" alt="GAO TEA packaging overview" onerror="this.classList.add('img-missing')"></div><figcaption>Packaging system — moulded pulp containers</figcaption></figure>
+    <section class="detail-section"><h3>The challenge</h3><p>The brief was to reduce packaging without losing the protection tea needs, and to express two qualities at once: the convenience of an instant product and the depth of a traditional one.</p><ul><li>Reduce individual packaging without compromising moisture protection</li><li>Zero-waste structure — no adhesives, minimal material</li><li>Scalable container system — one lid fits multiple body sizes</li><li>Express the duality of convenient and traditional through form</li></ul></section>
+    <figure class="detail-gallery"><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/gaotea-2.jpg</span></span><img src="images/gaotea-2.jpg" alt="Packaging detail" onerror="this.classList.add('img-missing')"></div><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/gaotea-3.jpg</span></span><img src="images/gaotea-3.jpg" alt="Dispensing lid" onerror="this.classList.add('img-missing')"></div><figcaption>Detail — rotating dispensing lid and pulp body</figcaption></figure>
+    <section class="detail-section"><h3>The packaging</h3><p>The packaging is formed from dry-pressed moulded pulp — no glue, no complex structure, fully recyclable. A rotating dispensing lid lets users access tea paste without opening the container fully, preserving freshness and reducing exposure.</p></section>
+    <figure class="detail-figure"><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/gaotea-4.jpg</span></span><img src="images/gaotea-4.jpg" alt="Prototype process" onerror="this.classList.add('img-missing')"></div><figcaption>Prototyping — form studies and 3D-printed parts</figcaption></figure>
+    <section class="detail-section"><h3>The brand</h3><p>The brand name GAO (膏) — meaning paste — shares its pronunciation with the Chinese word for high quality. The logo fuses the Latin letters G, A, O with the Chinese character 膏, creating a mark that holds both traditions simultaneously.</p><div class="tag-row"><span class="tag">Brand design</span><span class="tag">Packaging</span><span class="tag">Zero-waste</span><span class="tag">Moulded pulp</span><span class="tag">Prototype</span></div></section>
+    <figure class="detail-gallery"><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/gaotea-5.jpg</span></span><img src="images/gaotea-5.jpg" alt="Logo lockup" onerror="this.classList.add('img-missing')"></div><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/gaotea-6.jpg</span></span><img src="images/gaotea-6.jpg" alt="Brand application" onerror="this.classList.add('img-missing')"></div><figcaption>Brand — logo lockup and application</figcaption></figure>
+    <nav class="detail-nav">
+      <a class="prev" href="index.html"><span class="dn-key">Previous</span>All projects</a>
+      <a class="next" href="luffa.html"><span class="dn-key">Next</span>From Seed to Sponge</a>
+    </nav>
+  </div>
+</main>
+
+<section id="contact">
+  <h2 class="contact-header">Let's talk about<br><span>making, growing, and what design can become.</span></h2>
+  <div class="contact-links">
+    <a class="contact-link" href="mailto:10035545@network.rca.ac.uk"><span class="link-label">Email</span><span class="link-value">10035545@network.rca.ac.uk</span><span class="link-arrow">→</span></a>
+    <a class="contact-link" href="#"><span class="link-label">LinkedIn</span><span class="link-value">linkedin.com/in/jiajunzhao</span><span class="link-arrow">→</span></a>
+  </div>
+  <div class="footer-note"><span>Jiajun Zhao — Designer &amp; Researcher</span><span>Royal College of Art, London · 2025</span></div>
+</section>
+
+<script>
+  const obs = new IntersectionObserver(en => { en.forEach(x => { if (x.isIntersecting) {
+    x.target.style.opacity='1'; x.target.style.transform='translateY(0)';
+    x.target.style.transition='opacity 0.7s ease, transform 0.7s ease'; obs.unobserve(x.target);
+  } }); }, { threshold: 0.08 });
+  document.querySelectorAll('.detail-section, .detail-figure, .detail-gallery, .quote-block').forEach(el => {
+    el.style.opacity='0'; el.style.transform='translateY(20px)'; obs.observe(el);
+  });
+</script>
+
+</body>
+</html>

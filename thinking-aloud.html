@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thinking Aloud — Jiajun Zhao</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-name">Jiajun Zhao</a>
+  <ul class="nav-links">
+    <li><a href="works.html">Works</a></li>
+    <li><a href="living-practice.html">Living Practice</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="detail-main">
+  <header class="detail-hero">
+    <a href="index.html" class="detail-back">← Back to home</a>
+    <p class="detail-eyebrow">Work · Graduation</p>
+    <h1 class="detail-title">Thinking Aloud</h1>
+    <p class="detail-subtitle">A device-based inquiry into how we externalise inner thought.</p>
+    <div class="detail-meta"><div class="meta-item"><span class="meta-key">Role</span><span class="meta-val">Designer · Researcher</span></div><div class="meta-item"><span class="meta-key">Context</span><span class="meta-val">Graduation Project</span></div><div class="meta-item"><span class="meta-key">School</span><span class="meta-val">Royal College of Art</span></div><div class="meta-item"><span class="meta-key">Year</span><span class="meta-val">2025</span></div></div>
+  </header>
+  <div class="detail-body">
+    <div class="notice"><p>Draft page. Send the project content (brief, process, images, outcome) and this will be finalised. The text below is a placeholder and the image slots are reserved.</p></div>
+    <section class="detail-section lead"><p>Thinking Aloud — my graduation project at the Royal College of Art. A device-based inquiry into how we externalise inner thought.</p></section>
+    <figure class="detail-figure"><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/thinking-1.jpg</span></span><img src="images/thinking-1.jpg" alt="Thinking Aloud device" onerror="this.classList.add('img-missing')"></div><figcaption>The device — to be added</figcaption></figure>
+    <section class="detail-section"><h3>Overview</h3><p>Placeholder text. This section will describe the research question, the design process, and what the project set out to explore.</p></section>
+    <figure class="detail-gallery"><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/thinking-2.jpg</span></span><img src="images/thinking-2.jpg" alt="Field research" onerror="this.classList.add('img-missing')"></div><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/thinking-3.jpg</span></span><img src="images/thinking-3.jpg" alt="Exhibition testing" onerror="this.classList.add('img-missing')"></div><figcaption>Process and testing — to be added</figcaption></figure>
+    <section class="detail-section"><h3>Outcome</h3><p>Placeholder text. This section will describe the final outcome, the exhibition, and the findings.</p><div class="tag-row"><span class="tag">Research</span><span class="tag">Device</span><span class="tag">RCA</span></div></section>
+    <nav class="detail-nav">
+      <a class="prev" href="leatherwork.html"><span class="dn-key">Previous</span>A Fox, a Bag, and a Repair</a>
+      <a class="next" href="commercial.html"><span class="dn-key">Next</span>Commercial Project</a>
+    </nav>
+  </div>
+</main>
+
+<section id="contact">
+  <h2 class="contact-header">Let's talk about<br><span>making, growing, and what design can become.</span></h2>
+  <div class="contact-links">
+    <a class="contact-link" href="mailto:10035545@network.rca.ac.uk"><span class="link-label">Email</span><span class="link-value">10035545@network.rca.ac.uk</span><span class="link-arrow">→</span></a>
+    <a class="contact-link" href="#"><span class="link-label">LinkedIn</span><span class="link-value">linkedin.com/in/jiajunzhao</span><span class="link-arrow">→</span></a>
+  </div>
+  <div class="footer-note"><span>Jiajun Zhao — Designer &amp; Researcher</span><span>Royal College of Art, London · 2025</span></div>
+</section>
+
+<script>
+  const obs = new IntersectionObserver(en => { en.forEach(x => { if (x.isIntersecting) {
+    x.target.style.opacity='1'; x.target.style.transform='translateY(0)';
+    x.target.style.transition='opacity 0.7s ease, transform 0.7s ease'; obs.unobserve(x.target);
+  } }); }, { threshold: 0.08 });
+  document.querySelectorAll('.detail-section, .detail-figure, .detail-gallery, .quote-block').forEach(el => {
+    el.style.opacity='0'; el.style.transform='translateY(20px)'; obs.observe(el);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Fox, a Bag, and a Repair — Jiajun Zhao</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-name">Jiajun Zhao</a>
+  <ul class="nav-links">
+    <li><a href="works.html">Works</a></li>
+    <li><a href="living-practice.html">Living Practice</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="detail-main">
+  <header class="detail-hero">
+    <a href="index.html" class="detail-back">← Back to home</a>
+    <p class="detail-eyebrow">Living Practice · 02</p>
+    <h1 class="detail-title">A Fox, a Bag,<br>and a Repair</h1>
+    <p class="detail-subtitle">When a non-human actor enters the life of an object.</p>
+    <div class="detail-meta"><div class="meta-item"><span class="meta-key">Craft</span><span class="meta-val">Leatherwork · Saddle-stitch</span></div><div class="meta-item"><span class="meta-key">Act</span><span class="meta-val">Repair</span></div><div class="meta-item"><span class="meta-key">Theme</span><span class="meta-val">More-than-human design</span></div><div class="meta-item"><span class="meta-key">Object</span><span class="meta-val">Crossbody bag</span></div></div>
+  </header>
+  <div class="detail-body">
+    <section class="detail-section lead"><p>A hand-stitched leather bag, a fox that took it in the night, and a repair that became the most interesting seam.</p></section>
+    <figure class="detail-figure"><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/leather-1.jpg</span></span><img src="images/leather-1.jpg" alt="The hand-stitched leather bag" onerror="this.classList.add('img-missing')"></div><figcaption>The bag — saddle-stitched and hand-burnished</figcaption></figure>
+    <section class="detail-section"><h3>The making — and the taking</h3><p>I had made a leather crossbody bag by hand for my partner — saddle-stitched, hand-burnished, shaped across many evenings. One morning, a fox came into our garden and took it. When I found the bag, the shoulder strap had been partially eaten through.</p></section>
+    <figure class="detail-gallery"><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/leather-2.jpg</span></span><img src="images/leather-2.jpg" alt="Leatherwork tools" onerror="this.classList.add('img-missing')"></div><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/leather-3.jpg</span></span><img src="images/leather-3.jpg" alt="The damaged strap" onerror="this.classList.add('img-missing')"></div><figcaption>Tools, and the strap the fox left behind</figcaption></figure>
+    <section class="detail-section"><h3>The repair</h3><p>I repaired it. I cut a new strap from black leather, stitched it to the original tan, and riveted the join. The bag now carries a visible record of this encounter — a seam where two leathers meet, a small interruption in the original design that is also its most interesting detail.</p></section>
+    <div class="quote-block"><p>"Repair as a design act, rather than an afterthought."</p><cite>— Research direction</cite></div>
+    <section class="detail-section"><h3>Why it matters</h3><p>This experience sits at the heart of what I want to research: how non-human actors change the trajectory of designed objects, and what happens when repair becomes a design act rather than an afterthought.</p><div class="tag-row"><span class="tag">Leatherwork</span><span class="tag">Repair</span><span class="tag">More-than-human</span><span class="tag">Research</span></div></section>
+    <figure class="detail-gallery"><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/leather-4.jpg</span></span><img src="images/leather-4.jpg" alt="New black strap" onerror="this.classList.add('img-missing')"></div><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/leather-5.jpg</span></span><img src="images/leather-5.jpg" alt="The riveted join" onerror="this.classList.add('img-missing')"></div><div class="ph-cell"><span class="ph-label"><span>upload →</span><span class="ph-name">images/leather-6.jpg</span></span><img src="images/leather-6.jpg" alt="Two leathers meeting" onerror="this.classList.add('img-missing')"></div><figcaption>The repair — a seam where two leathers meet</figcaption></figure>
+    <nav class="detail-nav">
+      <a class="prev" href="luffa.html"><span class="dn-key">Previous</span>From Seed to Sponge</a>
+      <a class="next" href="thinking-aloud.html"><span class="dn-key">Next</span>Thinking Aloud</a>
+    </nav>
+  </div>
+</main>
+
+<section id="contact">
+  <h2 class="contact-header">Let's talk about<br><span>making, growing, and what design can become.</span></h2>
+  <div class="contact-links">
+    <a class="contact-link" href="mailto:10035545@network.rca.ac.uk"><span class="link-label">Email</span><span class="link-value">10035545@network.rca.ac.uk</span><span class="link-arrow">→</span></a>
+    <a class="contact-link" href="#"><span class="link-label">LinkedIn</span><span class="link-value">linkedin.com/in/jiajunzhao</span><span class="link-arrow">→</span></a>
+  </div>
+  <div class="footer-note"><span>Jiajun Zhao — Designer &amp; Researcher</span><span>Royal College of Art, London · 2025</span></div>
+</section>
+
+<script>
+  const obs = new IntersectionObserver(en => { en.forEach(x => { if (x.isIntersecting) {
+    x.target.style.opacity='1'; x.target.style.transform='translateY(0)';
+    x.target.style.transition='opacity 0.7s ease, transform 0.7s ease'; obs.unobserve(x.target);
+  } }); }, { threshold: 0.08 });
+  document.querySelectorAll('.detail-section, .detail-figure, .detail-gallery, .quote-block').forEach(el => {
+    el.style.opacity='0'; el.style.transform='translateY(20px)'; obs.observe(el);
+  });
+</script>
+
+</body>
+</html>
