@@ -92,7 +92,7 @@ nav {
 
 .project-card {
   display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem;
-  align-items: center; padding: 4rem 0; border-top: 1px solid var(--line);
+  align-items: stretch; padding: 4rem 0; border-top: 1px solid var(--line);
 }
 .project-card:last-child { border-bottom: 1px solid var(--line); }
 .project-card.reverse .pc-media { order: 2; }
@@ -103,10 +103,12 @@ nav {
 .pc-media .ph-cell:first-child { grid-column: span 2; aspect-ratio: 16 / 9; }
 .pc-media .ph-cell { aspect-ratio: 4 / 3; }
 
+.pc-text { display: flex; flex-direction: column; }
 .pc-text .pc-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1rem; }
 .pc-text h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; line-height: 1.12; letter-spacing: -0.025em; margin-bottom: 0.5rem; }
 .pc-text .pc-role { font-size: 13px; font-weight: 500; color: var(--ink-faint); margin-bottom: 1.2rem; }
 .pc-text .pc-body { font-size: 1rem; line-height: 1.7; color: var(--ink-light); margin-bottom: 1.5rem; }
+.pc-text .view-details { margin-top: auto; }
 
 /* View details — italic, neutral colour, left-aligned with the body copy above */
 .view-details {
